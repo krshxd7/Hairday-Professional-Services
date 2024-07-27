@@ -1,5 +1,4 @@
 # Hairday-Professional-Services
-Sure, here's a short prompt for your GitHub project on Hair Day professional services:
 
 ---
 
