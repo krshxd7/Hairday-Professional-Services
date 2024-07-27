@@ -1,6 +1,3 @@
-# Hairday-Professional-Services
-
----
 
 # Hair Day Professional Services
 
