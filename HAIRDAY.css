@@ -1,154 +1,149 @@
-.logo {
-    display: block;
-    width: 400px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #233142;
+    color: #142d4c;
 }
 
-label > marquee {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: xx-large;
-    color: #ea0505;
+.logo {
+    display: block;
+    margin: 40px auto 10px;
+    width: 300px;
+    height: auto;
 }
 
 .navbar {
     display: flex;
-    width: auto;
+    justify-content: center;
     background-color: #222831;
-    border-radius: 50px;
-    justify-content: space-evenly;
+    border-radius: 40px;
+    overflow: hidden;
     flex-wrap: wrap;
 }
 
 .navbar a {
-    padding: 20px 50px;
+    padding: 15px 30px;
     color: white;
-    text-align: center;
     text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
 }
 
-a:hover {
-    background: aliceblue;
+.navbar a:hover {
+    background-color: white;
     color: red;
 }
 
-body {
-    display: grid;
-    background-color: #233142;
-    margin: 0;
-    gap: 40px;
-    padding-bottom: 60px;
+.announcement {
+    font-size: 24px;
+    color: #ea0505;
+    font-weight: bold;
+    margin: 20px 0;
 }
 
 .promotion {
-    display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-    justify-content: center;
+    text-align: center;
+    margin: 0 10px;
 }
 
-.promotion > img {
-    border-radius: 30px;
+.promotion img {
     width: 100%;
-    max-height: 400px;
-    object-fit: cover;
+    max-width: 1200px;
+    border-radius: 20px;
 }
 
 .services {
     display: flex;
-    gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-#services {
+    gap: 40px;
+    padding: 50px 20px;
     background-color: #9fd3c7;
     border-radius: 40px;
-    padding: 20px;
-    width: 450px;
-    transition: transform 0.3s ease-in-out;
+    margin: 40px auto;
+    max-width: 1400px;
 }
 
-#services > img {
-    width: 100%;
-    border-radius: 40px;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: large;
-    text-align: center;
-    font-style: oblique;
+.service-card {
     background: #e3e3e3;
-    color: #142d4c;
     border-radius: 30px;
-    padding: 10px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
 }
 
-#footerstart {
-    margin-top: 50px;
+.service-card:hover {
+    animation: zoom-in-zoom-out 1.5s ease-in-out;
+    box-shadow: 0 0 10px white, 0 0 20px yellow;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.service-card h2 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.service-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.book-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #e63946;
+}
+
+.footer-content {
     display: flex;
-    gap: 100px;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
     background-color: #1e1e2f;
+    padding: 20px 50px;
+    flex-wrap: wrap;
 }
 
-.footlogo img {
+.footer-content img {
     width: 200px;
 }
 
-#footer {
-    font-size: xx-large;
-    color: #ee8446;
-}
-
 @keyframes zoom-in-zoom-out {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
-#services:hover {
-    animation: zoom-in-zoom-out 1.5s ease-in-out;
-    box-shadow:
-        0 0 10px white,
-        0 0 20px white,
-        0 0 30px yellow,
-        0 0 40px yellow;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a {
-        padding: 10px 20px;
-        width: 100%;
-    }
-
+@media (max-width: 900px) {
     .services {
         flex-direction: column;
         align-items: center;
     }
 
-    .logo {
-        width: 300px;
-        height: auto;
+    .navbar a {
+        flex: 1 1 100%;
+        text-align: center;
     }
 
-    #footerstart {
+    .footer-content {
         flex-direction: column;
-        gap: 20px;
+        text-align: center;
     }
 }
